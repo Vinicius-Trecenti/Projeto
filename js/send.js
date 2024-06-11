@@ -6,8 +6,15 @@ function createSend(categoria, piada, nome, sobrenome, email) {
     let currentDate = new Date();
     currentDate = currentDate.getDate().toString() + '/' + (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
 
-    card_id++
-    cards.innerHTML +=
+    console.log(categoria, piada, nome, sobrenome, email)
+
+    // if(categoria == '' || piada == '' || nome == '' || sobrenome == '' || email == '') {
+    //     alert('Por favor, preencha todos os campos')
+    //     return
+    // }
+    // else{
+        card_id++
+        cards.innerHTML +=
         `
                         <div class="card" id="${card_id}">
                             <div class="top">
@@ -29,10 +36,10 @@ function createSend(categoria, piada, nome, sobrenome, email) {
                             </div>
                         </div>
                         `
+    // }
 }
 
 function getForm() {
-    console.log('pegou')
     const form = document.querySelector('form');
 
     form.addEventListener('submit', function (event) {
@@ -43,9 +50,9 @@ function getForm() {
         const email = document.getElementById('email').value;
         const categoria = document.getElementById('categoria').value;
         const piada = document.getElementById('piada').value;
-        form.reset();
 
         createSend(categoria, piada, nome, sobrenome, email);
+        form.reset();
     });
 }
 
