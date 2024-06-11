@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/send.css">
-
-    <script src="./js/send.js"></script>
-
+    <script src="./js/send.js" defer></script>
     <title>Comedy Club - Favorites</title>
 </head>
 
@@ -17,7 +15,6 @@
         <div class="logo">
             <h1>Comedy Club</h1>
         </div>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -29,83 +26,50 @@
 
     <main>
         <div class="box">
-
             <div class="form">
-                <form action="">
+                <form id="sendForm">
                     <h1 class="title">Send jokes</h1>
                     <div class="form-body">
                         <fieldset>
-                            <legend><img src="./img/icons/perfil.png" alt="clean" width="40px"> Dados pessoais</legend>
-
+                            <legend><img src="./img/icons/perfil.png" alt="perfil" width="40px"> Dados pessoais</legend>
                             <div>
                                 <label for="nome">Name:</label>
                                 <input type="text" name="nome" value="" id="nome">
                             </div>
-
                             <div>
-                                <label for="sobrenome">Last name</label>
+                                <label for="sobrenome">Last name:</label>
                                 <input type="text" name="sobrenome" value="" id="sobrenome">
                             </div>
-
                             <div>
-                                <label for="email">Email</label>
+                                <label for="email">Email:</label>
                                 <input type="email" name="email" value="" id="email">
                             </div>
-
                         </fieldset>
-
                         <fieldset>
-                            <legend><img src="./img/icons/hat.png" alt="clean" width="40px"> Joke</legend>
+                            <legend><img src="./img/icons/hat.png" alt="hat" width="40px"> Joke</legend>
                             <div>
                                 <label for="categoria">Category:</label>
                                 <input type="text" name="categoria" value="" id="categoria">
                             </div>
-
                             <div>
-                                <label for="piada">Joke: </label>
+                                <label for="piada">Joke:</label>
                                 <textarea name="piada" id="piada"></textarea>
                             </div>
-
                         </fieldset>
-
                         <div class="form-footer">
-                            <button type="submit" onclick="getForm()">Send</button>
+                            <button type="button" onclick="getForm()">Send</button>
                         </div>
                     </div>
                 </form>
             </div>
 
             <div class="envios">
-
                 <h1 class="title">Your send</h1>
-
                 <div class="cards">
-                    <!-- <div class="card" id="1">
-                        <div class="top">
-                            <h3>Category: Food</h3>
-                        </div>
-
-                        <div class="text">
-                            <p>Why did the tomato turn red?</p>
-                        </div>
-
-                        <div class="footer-card">
-                            <p>Send by: Name Last name</p>
-                            <p>Email: email</p>
-                            <p>Date: 01/01/2020</p>
-                        </div>
-                        <div>
-                            <button onclick="openEditModal(event)">Edit</button>
-                            <button onclick="deleteSend(event)">Delete</button>
-                        </div> -->
-                    </div>
-
+                    <!-- Cards will be added here dynamically -->
                 </div>
-
             </div>
-
         </div>
-
     </main>
 
     <footer>
@@ -116,7 +80,7 @@
         <div class="modal-content">
             <span class="close" onclick="cancelEdit()">&times;</span>
             <h2>Edit Joke</h2>
-            <form>
+            <form id="editForm">
                 <div class="form-body">
                     <fieldset>
                         <legend>Joke Details</legend>
@@ -124,35 +88,27 @@
                             <label for="edit-categoria">Category:</label>
                             <input type="text" name="edit-categoria" id="edit-categoria">
                         </div>
-
                         <div>
                             <label for="edit-piada">Joke:</label>
                             <textarea name="edit-piada" id="edit-piada"></textarea>
                         </div>
                     </fieldset>
-
                     <fieldset>
                         <legend>Your Details</legend>
                         <div>
                             <label for="edit-nome">Name:</label>
                             <input type="text" name="edit-nome" id="edit-nome">
-
                         </div>
-
                         <div>
                             <label for="edit-sobrenome">Last name:</label>
                             <input type="text" name="edit-sobrenome" id="edit-sobrenome">
                         </div>
-
                         <div>
                             <label for="edit-email">Email:</label>
                             <input type="email" name="edit-email" id="edit-email">
                         </div>
-
                         <input type="hidden" id="edit-card-id">
-
                     </fieldset>
-
                     <div class="form-footer">
                         <button type="button" onclick="saveChanges()">Save Changes</button>
                         <button type="button" onclick="cancelEdit()">Cancel</button>
