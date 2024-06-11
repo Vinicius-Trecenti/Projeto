@@ -25,7 +25,7 @@ function createSend(categoria, piada, nome, sobrenome, email) {
                             </div>
                             <div>
                                 <button onclick="openEditModal(event)">Edit</button>
-                                <button onclick="deleteFavorite(event)">Delete</button>
+                                <button onclick="deleteSend(event)">Delete</button>
                             </div>
                         </div>
                         `
