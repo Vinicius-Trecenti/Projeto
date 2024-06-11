@@ -20,9 +20,9 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="favorites.html">Favorites</a></li>
-                <li><a href="send.html">Send jokes</a></li>
+                <a href="index.html"><li>Home</a></li></a>
+                <a href="favorites.html"><li>Favorites</li></a>
+                <a href="send.html"><li>Send jokes</li></a>
             </ul>
         </nav>
     </header>
@@ -32,7 +32,10 @@
             <div>
                 
                 <h1><img src="./img/icons/star.png" alt="star" width="50px">Favorites</h1>
-                <h3>Here you can find jokes and search. Here you can discover a treasure trove of jokes and even search for specific themes to find the perfect punchline!</h3>
+                <h3>Here you can find jokes and search. Here you can discover a treasure trove of jokes and even search for specific themes to find the perfect punchline!
+                    <br> 
+                    <span>Be careful, some jokes are dangerous !!!</span>
+            </h3>
             </div>
             <div class="search" style="display: flex; gap: 10px;">
                 <label for="" style="display: flex; align-items: center; gap: 5px;">Look for a joke term
@@ -40,6 +43,10 @@
                 </label>
                 <input type="text" id="searchInput">
             </div>
+
+            <!-- <div class="danger">
+                <h6> Some jokes are dangerous!</h6>
+            </div> -->
             <div class="container">
                 <div class="esquerda">
                     <h2>Find jokes</h2>
@@ -78,7 +85,7 @@
     </main>
 
     <footer>
-        <h6>Comedy Club. Copyright 2024 © Todos os direitos reservados - Desenvolvido por Vinicius Trecenti</h6>
+        <h4>Comedy Club. Copyright 2024 © Todos os direitos reservados - Desenvolvido por Vinicius Trecenti</h4>
     </footer>
 
     <div id="editModal" class="modal" style="display:none;">

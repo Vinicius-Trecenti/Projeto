@@ -1,3 +1,7 @@
+main{
+    height: 100vh;
+}
+
 .caixa{
     display: flex;
     justify-content: center;
@@ -175,4 +179,15 @@ textarea{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+h3 span{
+    color: rgb(255, 0, 0);
+    
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
