@@ -49,6 +49,7 @@ textarea{
 }
 
 .direita{
+    width:600px;
     background-color: rgb(1, 1, 72);
     border-radius: 15px;
     margin: 20px;
