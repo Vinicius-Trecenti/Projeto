@@ -1,0 +1,98 @@
+.form-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+legend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    margin: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form{
+    padding: 20px;
+    margin: 30px;
+    border-radius: 30px;
+
+    background-color: rgb(1, 14, 113);
+    color: white;
+}
+
+.form h1{
+    text-align: center;
+    color: white;   
+}
+
+.envios{
+    padding: 20px;
+    margin: 30px;
+    border-radius: 30px;
+    background-color: rgb(0, 102, 255);
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.card{
+    width: 250px;
+    background-color: rgb(0, 30, 255);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+
+.envios h1{
+    text-align: center;
+    color: white;
+}
+
+textarea{
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
