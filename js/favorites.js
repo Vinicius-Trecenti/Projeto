@@ -129,8 +129,15 @@ async function getDadJokes() {
 }
 
 async function loadJokes() {
+    const loadingElement = document.getElementById('loading');
+    const jokesContainer = document.getElementById('jokes-list');
+
+    loadingElement.style.display = 'block';
+    jokesContainer.innerHTML = '';
     try {
         const jokesArray = [];
+        
+
         for(let i = 0; i <= 1; i++) {
             const joke1 = await fetchJoke();
             const joke2 = await getDadJokes();
@@ -157,11 +164,14 @@ async function loadJokes() {
                 }
             });
         }
+        loadingElement.style.display = 'none';
         
     } catch (error) {
         console.error('Erro ao carregar as piadas:', error);
     }
 }
+
+document.addEventListener('DOMContentLoaded', loadJokes);
 
 function insertJokes(category, paragraph1, paragraph2) {
     const cards = document.querySelector('.caixa .container .esquerda .cards')
