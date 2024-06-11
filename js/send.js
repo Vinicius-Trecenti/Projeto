@@ -31,8 +31,6 @@ function createSend(categoria, piada, nome, sobrenome, email) {
                         `
 }
 
-
-
 function getForm() {
     console.log('pegou')
     const form = document.querySelector('form');
@@ -65,7 +63,7 @@ function openEditModal(event) {
     const piada = card.querySelector('.text p').textContent;
     const nomeSobrenome = card.querySelector('.footer-card p:nth-child(1)').textContent.replace('Send by: ', '').trim().split(' ');
     const nome = nomeSobrenome[0];
-    const sobrenome = nomeSobrenome[1];
+    const sobrenome = nomeSobrenome[2];
     const email = card.querySelector('.footer-card p:nth-child(2)').textContent.replace('Email: ', '').trim();
 
     document.getElementById('edit-categoria').value = categoria;
@@ -73,7 +71,6 @@ function openEditModal(event) {
     document.getElementById('edit-nome').value = nome;
     document.getElementById('edit-sobrenome').value = sobrenome;
     document.getElementById('edit-email').value = email;
-
     document.getElementById('edit-modal').style.display = 'block';
     document.getElementById('edit-card-id').value = card.id;
 }
@@ -95,7 +92,6 @@ function saveChanges() {
 
     cancelEdit();
 }
-
 
 function cancelEdit() {
     document.getElementById('edit-modal').style.display = 'none';
