@@ -1,4 +1,4 @@
-.form-body{
+.form-body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,7 +6,7 @@
     gap: 20px;
 }
 
-fieldset{
+fieldset {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +17,12 @@ fieldset{
     border-radius: 15px;
 }
 
-legend{
+legend {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    
+
     margin: 10px;
 }
 
@@ -33,14 +33,14 @@ legend{
     justify-content: center;
 }
 
-.box{
+.box {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.form{
+.form {
     padding: 20px;
     margin: 30px;
     border-radius: 30px;
@@ -49,25 +49,25 @@ legend{
     color: white;
 }
 
-.form h1{
+.form h1 {
     text-align: center;
-    color: white;   
+    color: white;
 }
 
-.envios{
+.envios {
     padding: 20px;
     margin: 30px;
     border-radius: 30px;
     background-color: rgb(0, 102, 255);
 }
 
-input{
+input {
     border-radius: 5px;
     border: none;
     padding: 5px;
 }
 
-.card{
+.card {
     width: 250px;
     background-color: rgb(0, 30, 255);
     align-items: center;
@@ -81,18 +81,80 @@ input{
     border: 2px solid rgb(255, 255, 255);
 }
 
-.card:hover{
+.card:hover {
     transform: scale(1.03);
     transition: 0.4s;
 }
 
-.envios h1{
+.envios h1 {
     text-align: center;
     color: white;
 }
 
-textarea{
+textarea {
     border-radius: 5px;
     border: none;
     padding: 5px;
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none; /* Por padrão, o modal está oculto */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente para destacar o modal */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+/* Botão de fechar do modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; 
+}
+
+button[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type=button]:hover {
+    background-color: #45a049;
 }
