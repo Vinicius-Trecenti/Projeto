@@ -46,13 +46,9 @@ function deleteFavorite(event) {
 function openModal(event) {
     event.preventDefault();
 
-    // Seleciona o card
     var card = event.target.closest('.card');
-
-    // Acessa o conteúdo do card
     var topContent = card.querySelector('.top h3').textContent;
     var categoryText = topContent.split(':')[1].trim();
-
     var paragraphs = card.querySelectorAll('.text p');
     var firstParagraph = paragraphs.length > 0 ? paragraphs[0].textContent : '';
     var secondParagraph = paragraphs.length > 1 ? paragraphs[1].textContent : '';

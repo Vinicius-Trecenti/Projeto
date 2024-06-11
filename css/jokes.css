@@ -1,0 +1,46 @@
+.box {
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.jokes-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.joke {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.joke p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.loading {
+    display: none;
+    margin: 20px auto;
+}
+
+.spinner {
+    border: 4px solid rgba(0,0,0,0.1);
+    border-left-color: #4caf50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
