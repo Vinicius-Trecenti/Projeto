@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(typingTimer); 
     
         typingTimer = setTimeout(async function() {
-            const searchText = searchInput.value; // Obter o texto digitado
+            const searchText = searchInput.value; //texto digitado
             // console.log('Texto digitado:', searchText);
             
             try {
