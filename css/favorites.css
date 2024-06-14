@@ -1,5 +1,6 @@
 main{
-    height: 100vh;
+    /*height: 100vh;*/
+    height: auto;   
 }
 
 .caixa{
@@ -35,7 +36,8 @@ textarea{
 .container{
     background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;    
+    justify-content: center; 
+    flex-wrap: wrap;
 }
 
 .esquerda{

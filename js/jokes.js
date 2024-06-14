@@ -21,15 +21,74 @@ async function searchDadJokes(term) {
 }
 
 async function searchJoke(term) {
-    try {
-        const response = await fetch(`https://v2.jokeapi.dev/joke/Any?contains=${term}`);
-        const jokeData = await response.json();
-        return jokeData.jokes || [];
+    //console.log(term)
+
+    const results = []
+    
+    if (term == 'dark') {
+        for (let i = 0; i < 5; i++) {
+            try {
+                const response = await fetch('https://v2.jokeapi.dev/joke/Dark');
+                const jokeData = await response.json();
+                const joke = jokeData.setup + ' ' + jokeData.delivery;
+
+                if (jokeData.setup == undefined || jokeData.delivery == undefined) {
+                    const response = await fetch('https://v2.jokeapi.dev/joke/Dark');
+                    const jokeData = await response.json();
+                    const joke = jokeData.setup + ' ' + jokeData.delivery;
+
+                    if (jokeData.setup != undefined || jokeData.delivery != undefined) {
+                        results.push({ joke: joke });
+                    }
+                    else {
+                        console.log('erro ao buscar a piada')
+                    }
+                }
+                else {
+                    results.push({ joke: joke });
+                }
+                
+                // console.log('results', results);
+            }
+            catch (error) {
+                console.error('Erro ao buscar a piada:', error);
+                return [];
+            }
+        }
     }
-    catch (error) {
-        console.error('Erro ao buscar a piada:', error);
-        return [];
+    else {
+        for (let i = 0; i < 10; i++) {
+            try {
+                const response = await fetch(`https://v2.jokeapi.dev/joke/Any?contains=${term}`);
+                const jokeData = await response.json();
+                const joke = jokeData.setup + ' ' + jokeData.delivery;
+
+                if(jokeData.setup == undefined || jokeData.delivery == undefined) {
+                    const response = await fetch(`https://v2.jokeapi.dev/joke/Any?contains=${term}`);
+                    const jokeData = await response.json();
+                    const joke = jokeData.setup + ' ' + jokeData.delivery;
+
+                    if (jokeData.setup != undefined || jokeData.delivery != undefined) {
+                        results.push({ joke: joke });
+                    }
+                    else {
+                        console.log('erro ao buscar a piada')
+                    }
+
+                } else {
+                    results.push({ joke: joke });
+                }
+
+            }
+            catch (error) {
+                console.error('Erro ao buscar a piada:', error);
+                return [];
+            }
+        }
     }
+
+    console.log('joke', results)
+    return results || [];   
 }
 
 function getCategoryFromURL() {
@@ -51,9 +110,14 @@ async function loadJokes() {
     jokesContainer.innerHTML = '';
 
     const dadJokes = await searchDadJokes(category);
+    console.log('dadJokes', dadJokes);
+
     const otherJokes = await searchJoke(category);
+    console.log('otherJokes', otherJokes);
+
     const jokesList = [...dadJokes, ...otherJokes];
 
+    console.log('jokesList', jokesList);
     loadingElement.style.display = 'none';
 
     if (jokesList.length === 0) {

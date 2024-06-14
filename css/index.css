@@ -1,7 +1,6 @@
 body{
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-
 }
 
 header{
@@ -41,7 +40,7 @@ li{
 
 li:hover{
     background-color: #ffffff;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
 }
 
