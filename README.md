@@ -1,6 +1,6 @@
-# 🃏 Comedy Club 
+# 🃏 JokersClub 
 
-Bem-vindo ao projeto Comedy Club! Este projeto permite que você explore, salve e compartilhe piadas de várias categorias. Você também pode buscar por temas específicos para encontrar a piada perfeita para qualquer ocasião.
+Bem-vindo ao projeto JokersClub! Este projeto permite que você explore, salve e compartilhe piadas de várias categorias. Você também pode buscar por temas específicos para encontrar a piada perfeita para qualquer ocasião.
 
 ## Recursos
 
@@ -10,7 +10,7 @@ Bem-vindo ao projeto Comedy Club! Este projeto permite que você explore, salve 
 
 ## 🖥️ Utilização
 
-Para usar o aplicativo Comedy Club:
+Para usar o aplicativo JokersClub:
 
 1. Clone este repositório em sua máquina local.
 2. Abra o arquivo `index.html` em seu navegador da web para acessar a página inicial.
