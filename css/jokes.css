@@ -14,6 +14,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .joke {
@@ -22,13 +23,22 @@ main{
     border-radius: 10px;
     margin: 10px;
     width: 300px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+    background-color: #041da9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.box .joke:hover{
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
 }
 
 .joke p {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .loading {
